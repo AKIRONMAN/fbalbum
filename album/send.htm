@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <style>
+                html,body{
+                    margin:0;
+                    padding:0;
+                    width:100%;
+                    height:100%;
+                    overflow-x:hidden;
+                    overflow-y:auto;
+                    perspective:1px;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+                .proce{
+                    text-align:center;
+                }
+                .one,.two,.three,.four{
+                    background:white;
+                    width:100%;
+                    padding:10px;
+                }
+                img{
+                    width:80%;
+                }
+                h2{
+                    width:100px;
+                    padding:10px 10px;
+                    border-radius:100px;
+                    border:1px solid #3498db;
+                    background:rgba(52, 152, 219,0.5);
+                    color:white;
+                }
+                a{
+                    text-decoration:none;
+                    font-size:25px;
+                }
+                h3{
+                    cursor:pointer;
+                    background:rgba(231, 76, 60,1.0);
+                    color:white;
+                    padding:10px 0px;
+                }
+                h3:hover{
+                    background:rgba(52, 152, 219,1.0);
+                }
+            </style>
+</head>
+
+<body>
+    <div class="proce">
+            <a onclick="sent();">  <h3 style="margin-top:0px;">Go To Home</h3></a>
+            <div class="one">
+            <h2>step: 1</h2>
+            <img src="https.jpg" type="image/*" />
+        </div>
+        <div class="two">
+                <h2>step: 2</h2>
+            <img class="info" src="login.jpg" type="image/*" />
+        </div>  
+        <div class="two">
+                <h2>step: 3</h2>
+            <img class="info" src="one.jpg" type="image/*" />
+        </div>
+        <div class="three">
+                <h2>step: 4</h2>
+            <img class="info" src="two.jpg" type="image/*" />
+        </div>
+        <div class="four">
+                <h2>step: 5</h2>
+            <img class="info" src="three.jpg" type="image/*" />
+        </div>
+        <a onclick="sent();"> <h3>Go To Home</h3></a>
+    </div> 
+    <script>
+    function sent(){
+        window.location.href="https://fbalbumdownload.000webhostapp.com/album/";
+    }
+    </script>
+</body>
+
+</html>

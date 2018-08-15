@@ -1,0 +1,177 @@
+
+*{
+  font-family: 'Hanalei Fill', cursive;
+font-family: 'Modern Antiqua', cursive;
+cursor:pointer;
+}
+
+  #image .imagestyle,#image .main{
+      width:200px;
+      height:200px;
+      border-radius:5px;
+      cursor:pointer;
+      background-position:center;
+      background-size:cover;
+      display:inline-table;
+  }
+  .main{
+      padding:20px 20px;
+      padding-left:10px;
+      border:2px solid rgba(46, 204, 113,0.7);
+  }
+  #image .imagestyle{
+        width:100%;
+        height:80%;
+        border:5px solid rgba(0,0,0,0.7);
+  }
+  #image .main{
+      box-shadow:1px 2px 3px rgba(0,0,0,0.2);
+     background:rgba(255,255,255,0.9);
+      margin:5px;
+      margin-left:10px;
+  }   
+  #image .imageclick{
+      width:200px;
+      height:200px;
+      background:rgba(52, 152, 219,0.5);
+      cursor:pointer;
+  }
+  #image .imagestyle:hover{
+      animation:anim 7s infinite linear;
+  }
+  @keyframes anim{
+      0%{background-position:center;}
+      25%{background-position:left;}
+      50%{background-position:center;}
+      75%{background-position:right;}
+      100%{background-position:center;}
+
+  }
+  #loginid{
+    color:rgba(255,255,255,0.9);
+      margin-top:10%;
+    animation:logi 1s 1s ease-in;  
+    transform:scale(1,1);
+      text-align:center;
+}
+@keyframes logi{
+    to{ transform:scale(1,1);}
+    from{transform:scale(0,0);}
+}
+#loginid i{
+    font-size:4em;
+}
+#loginid font{
+    color:#2980b9;
+    font-size:4em;  
+    font-family: 'Source Sans Pro', sans-serif;
+    animation:fon 5s infinite linear;
+}
+ #login{
+     font-size:3em;
+     padding:1% 4%;
+     letter-spacing:10px;
+     font-weight:bold;
+     border:none;
+     background:rgba(0,0,0,.2);
+     color:rgba(255,255,255,.9);
+      transition:1s;
+      cursor:pointer;
+      border:10px solid rgba(41, 128, 185,1.0);
+  }
+  #login:hover{
+      transition:1s;
+      border:10px solid rgba(255,255,255,0.8);
+      background:transparent;
+      color:rgba(0,0,0,.7);
+      text-shadow:1px 2px 3px rgba(0,0,0,0.2);
+  }
+     
+ #thumb,#thum{
+     width:200px;
+     height:200px;
+ }
+img{
+cursor:pointer;
+}
+#drives,#select,#downlo{
+cursor:pointer;
+font-weight:bold;
+letter-spacing:3px;
+padding:10px 30px;
+border:none;
+color:black;
+font-size:20px;
+background:transparent;
+margin-left:10px;
+border:5px solid rgba(46, 204, 113,1.0);
+}
+#drives:hover,#select:hover,#downlo:hover{
+    transition:0.5s;
+    border:5px solid rgba(0,0,0,0.3);
+    background:rgba(46, 204, 113,1.0);
+    color:white;
+}
+.download{
+color:rgba(0,0,0,0.4);
+display:inline;
+padding:10px;
+}
+input[type="radio"]{
+position:absolute;
+opacity:0;
+}
+#ul{
+position:absolute;
+margin-top:40%;
+left:0;
+border-radius:5px;
+background:white;
+cursor:pointer;
+/*margin:-150px 10px;
+*/box-shadow:1px 2px 3px 4px rgba(0,0,0,0.2);
+}
+#ul p{
+padding:1px 20px;
+margin:0px;
+padding:15px 30px;
+font-weight:bold;
+}
+#ul p:nth-child(1){
+border-bottom:1px solid rgba(0,0,0,0.2);
+}
+#ul p:hover{
+color:white;
+background:black;
+}
+.container #one {
+position: absolute;
+width: 100%;
+height: 100%;
+background-position:center;
+background-repeat:no-repeat;
+background-size:40% 100%;
+}
+#cont,#back,#bac{
+position:absolute;
+background:transparent;
+color:white;
+font-size:2em;
+font-weight:bold;
+cursor:pointer;
+z-index:15;
+}
+#cont{bottom:0;right:30%;}
+#back{margin-top:20px;left:15%;}
+#bac{margin-top:-40px;color:black;right:10%;}
+#back:hover,#bac:hover{
+transition:0.5s;
+font-size:40px;
+}
+#cont img{
+width:100px;
+height:100px;
+}
+.form{
+width:100px;
+}

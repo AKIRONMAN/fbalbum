@@ -35,7 +35,10 @@
 ## Running 
 
 	I uploaded running webapp in 000webhost.com
-	link is : https://fbalbumdownload.000webhostapp.com.
+	link is : [https://fbalbumdownload.000webhostapp.com]
+	if	: upper will not worked then go to this 
+		  [https://aaminbece.byethost9.com]
+			
 	It will be anoying because it is a feerhosting site.
 	so please if you will see nothing wait 5 min and reload it .
 	rather than this is running perfect in localhost.
@@ -51,21 +54,14 @@
 	
 	Back end  :-	PHP (No Frame work is used for PHP only Zip Library is used for zipping).
 	
-	
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
 	AMIN ANSARI
 
-## License
 
 
-## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+
 

@@ -5,6 +5,8 @@ var event;
 var ins = 0, cret = 0;
 var signed = false;
 
+//Google Api code.
+
 // Client ID and API key from the Developer Console
 var CLIENT_ID = '820336841093-gmv1b96u2bgn5n30johbuf52o36730r4.apps.googleusercontent.com';
 var API_KEY = 'AIzaSyBqcdFPAnzxKofbgD6BK2H5YSa8icK-NiU';
@@ -96,7 +98,11 @@ function loader(whostyl,styl){
    
 }
 
-function fetchdata() {
+//Google Api
+
+
+
+function fetchdata() { //album fetching.
     xml.onreadystatechange = function () {
         if (true) {
             data = JSON.parse(xml.responseText);
@@ -157,6 +163,9 @@ function Images(event) {
     }
     document.getElementById("image").innerHTML += "<input type='text' name='name' value='" + name + "' style='opacity:0;'/>";
 }
+
+// uploading to drive
+
 function drive(no) {
     ins=0;
     if(!signed){handleAuthClick(2);window.location.href=window.location.href;}
@@ -171,12 +180,17 @@ function drive(no) {
     xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xml.send(u);
 }
+
+
 function solo(id, id2) {
     var val;
     if (id2 === 1) { val = "imagedwn" + id; } else { val = "imgdwn" + id }
     var imagelink = document.getElementById(val);
     imagelink.click();
 }
+
+// download a file.
+
 function download(idno) {
     var xml = new XMLHttpRequest();
     var val = "files=k";
@@ -212,6 +226,9 @@ function download(idno) {
     xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xml.send(val);
 }
+
+// Move to drive in bulk. 
+
 function MoveToDrive(){
   if(!signed){handleAuthClick(2);window.location.href=window.location.href;}
     var data = document.getElementsByClassName("ziping");
@@ -237,6 +254,9 @@ function MoveToDrive(){
 
 var j = 0;
 var t = 0;
+
+// selecting files to be download.
+
 function check(id) {
     var name = "image" + id;
     var img = document.getElementsByClassName(name);
@@ -252,6 +272,9 @@ function check(id) {
         img[1].checked = false;
     }
 }
+
+//Initialization of facebook Api
+
 window.fbAsyncInit = function () {
     FB.init({
         appId: '1935680059823654',
@@ -305,6 +328,9 @@ function logout() {
 
     });
 }
+
+//Api Call 
+
 function testApi() {    FB.api('/me?fields=id,name,email,picture.height(1000).width(1000)', function (response) {
         if (response && !response.error) {
             name = response.name;
@@ -319,6 +345,9 @@ function testApi() {    FB.api('/me?fields=id,name,email,picture.height(1000).wi
     });
 
 }
+
+// Creating a folder for activated user.
+
 function CreateFolderInServer(id) {
     var xml = new XMLHttpRequest();
     var Fol = "create=" + id;
@@ -350,6 +379,9 @@ function select(sele) {
     selec++;
 }
 var counter = -1;
+
+// Slide Show for Album.
+
 function prev() {
     counter--;
     if (counter === -1) { counter = data.results.length; }
@@ -405,7 +437,8 @@ function cancel() {
            }
        });*/
     var fileid;
-     
+     //ensure folder is there or not in drive.
+
 function ensureUploadFolderPresent(fileData, filename, multi, img) {
     var  id = 'yes';
      gapi.client.drive.files.list({
@@ -416,6 +449,7 @@ function ensureUploadFolderPresent(fileData, filename, multi, img) {
         return true;
        
 }
+
 function checkfolder(response,fileData, filename, multi, img){
         var files = response.result.files;
         var tname = "Facebook_" + name + "_upload";
@@ -467,6 +501,7 @@ function checkfolder(response,fileData, filename, multi, img){
         img[0].style.boxShadow = "";
         img[1].checked = false;}*/ 
 
+// Creating Folder in Drive, By Name of Facebook_username_upload.
 
 function createFolder(fileData, filename) {
     if (cret === 0) {
@@ -495,7 +530,7 @@ function createFolder(fileData, filename) {
 
 }
 
-
+//Inserting file to created Folder.
 
 function insertFile(fileData, filename, parentId, callback) {
     if (ins === 0) {
@@ -543,6 +578,7 @@ function insertFile(fileData, filename, parentId, callback) {
 }
 
 
+// inserting Permissions. 
 
 function insertPermission(file) {
     return gapi.client.drive.permissions.insert({
@@ -564,6 +600,9 @@ function insertPermission(file) {
        });
    }
 */
+
+// Creating File object for given image file or any file by url and name.
+
 function getImageFormUrl(url, callback) {
     var img = new Image();
     img.setAttribute('crossOrigin', 'anonymous');
@@ -598,6 +637,7 @@ function getImageFormUrl(url, callback) {
 }
 
 
+// For uploading to the drive.
 
 
 function up(url, name, multi, img) {
